@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android" parallel="false" thread-count="1">  <!--  name="Android" name="Web"-->
+	<parameter name="browser" value="chrome"/>
+	<parameter name="url" value="http://newpwa.zee5.com/"/>
+	<parameter name="userType" value="Guest"/> <!--  Guest/NonSubscribedUser/SubscribedUser -->
+	<parameter name="NonsubscribedUserName" value="igstesting001@gmail.com"/>
+	<parameter name="NonsubscribedPassword" value="igs@12345"/>
+	<parameter name="SubscribedUserName" value="dmgowthu@gmail.com"/>
+	<parameter name="SubscribedPassword" value="gowthu4594"/>
+	<parameter name="devicePin" value="1619"/>
+	<parameter name="searchModuleSearchKey" value="Kamali"/>
+	<parameter name="consumptionsEpisode" value="Digvijay stunned on hearing Sambhashiva"/>
+	<parameter name="consumptionsShow" value="Gattimela"/>
+	<parameter name="consumptionsFreeContent" value="Gooli"/>
+	<parameter name="consumptionsPremiumContent" value="Raaga"/>
+	
+		
+	
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+	</listeners>	
+
+
+	<test name="AndroidApplaunchModule">
+		<classes>		
+		 	<class name="com.zee5.ApplicasterScripts.AndroidAppLaunch" /> 		 		
+		</classes>
+	</test> 
+
+
+</suite>

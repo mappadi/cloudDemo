@@ -1,0 +1,43 @@
+#image: ubuntu:latest
+#image: markhobson/maven-chrome:latest
+#image: elgalu/selenium:latest
+#image: node:latest
+image: thiagoadelino/chrome-selenium-webdriver-maven-xvfb
+
+options:
+  docker: true
+  size: 2x
+
+pipelines:
+  custom:
+    custom-project-and-env:
+      - variables:
+            - name: Suite
+            - name: UserType
+            - name: BrowserType
+            - name: Environment
+      - step: 
+          name: Test Execution
+          script:
+            - Xvfb :0 -screen 0 1280x960x24 &
+            - export DISPLAY=:0          
+            - mvn -version
+            - google-chrome --version
+            - pwd
+            - ls
+            - mvn clean test -DsuiteXmlFile=${Suite} -DUserType=${UserType} -DBrowser=${BrowserType} -Denv=${Environment}            
+
+    noParam:
+      - variables:
+          - name: UserType
+          - name: runMode
+      - step: 
+          name: Test Execution
+          script:
+            - Xvfb :0 -screen 0 1280x960x24 &
+            - export DISPLAY=:0          
+            - mvn -version
+            - google-chrome --version
+            - pwd
+            - ls
+            - mvn test

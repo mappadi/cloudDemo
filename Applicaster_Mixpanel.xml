@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android" parallel="false" thread-count="1">  <!-- name="Android" -->
+
+    <parameter name="userType" value="Guest" />  <!-- Guest/NonSubscribedUser/SubscribedUser -->
+    
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" /> 
+	
+	<parameter name="keyword1" value="Jodi Hakki" />
+	<parameter name="keyword2" value="Chemistry of Kariyappa" />
+	<parameter name="displayLanguage" value="Marathi" />
+	
+	<parameter name="NonsubscribedUserName" value="amdnonmixpanel@yopmail.com" />
+	<parameter name="NonsubscribedPassword" value="123456" />
+	
+	<parameter name="SubscribedUserName" value="zeetestigs923@gmail.com" />
+	<parameter name="SubscribedPassword" value="123456" />
+	
+	<parameter name="ParentalNonsubscribedUserName" value="juspayuser@mailnesia.com" />
+	<parameter name="ParentalNonsubscribedPassword" value="123456" />
+	
+	<parameter name="ParentalSubscribedUserName" value="gdmuser3@mailnesia.com" />
+	<parameter name="ParentalSubscribedPassword" value="123456" />
+	<parameter name="tabName" value="Movies" />
+	<parameter name="FirstName" value="edcv" />
+	<parameter name="LastName" value="yuhj" />
+	<parameter name="keyword3" value="Shivaji Surathkal" />
+	<parameter name="keyword4" value="Aditya apologises to Paarvathi - Paaru" />
+	<parameter name="keyword5" value="Rudrathandava - Chambal" />
+	<parameter name="keyword6" value="Popcorn Monkey Tiger (A)" />
+	<parameter name="keyword7" value="Trailer - No Entry" />
+	<parameter name="keyword7" value="Trailer - No Entry"/>
+	<parameter name="keyword8" value="Bublu Dablu - Robo Rumble"/>
+	<parameter name="keyword9" value="Kurukshetra"/>
+	
+	
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!--  <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+	
+	<test name="ZNAMixpanel_AdWatchDuration">
+		<classes>
+			<class name="com.zee5.MixpanelScripts.ZNAMixpanel_AdWatchDuration" />
+		</classes>
+	</test>
+	
+	<test name="ApplicasterMixpanelScript">
+		<classes>
+			<class name="com.zee5.PWAMixpanelScripts.ZNAMixpanelScript_Onboarding" />
+		</classes>
+	</test>
+	
+	<test name="ZNAMixpanel_QualityChange">
+		<classes>
+			<class name="com.zee5.MixpanelScripts.ZNAMixpanel_QualityChange" />
+		</classes>
+	</test>
+
+</suite>

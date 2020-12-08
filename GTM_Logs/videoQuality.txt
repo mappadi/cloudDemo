@@ -1,0 +1,7 @@
+--------- beginning of crash
+--------- beginning of system
+--------- beginning of main
+01-09 14:45:05.190 15567 15567 E PlaybackManager: updateWatchHistory onErrorResponse: null
+01-09 14:57:08.032 19971 19971 E PlaybackManager: updateWatchHistory onErrorResponse: null
+01-09 15:12:18.061 23961 23961 E PlaybackManager: updateWatchHistory onErrorResponse: null
+01-09 15:20:12.732 26029 26029 E PlaybackManager: updateWatchHistory onErrorResponse: null
